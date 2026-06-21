@@ -12,7 +12,7 @@ import {
 } from '@ionic/angular/standalone';
 
 import { FormsModule } from '@angular/forms';
-
+import { UsuarioCardComponent } from '../components/usuario-card/usuario-card.component';
 import { FirebaseService } from '../services/firebase.service';
 import { ApiService } from '../services/api.service';
 
@@ -30,7 +30,8 @@ import { ApiService } from '../services/api.service';
     IonLabel,
     IonInput,
     IonList,
-    FormsModule
+    FormsModule,
+    UsuarioCardComponent
   ]
 })
 export class HomePage implements OnInit {

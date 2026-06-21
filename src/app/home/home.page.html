@@ -25,23 +25,21 @@
   <ion-button
     expand="block"
     (click)="cadastrar()">
-
     Cadastrar
   </ion-button>
 
   <ion-list>
 
-    @for(usuario of usuarios; track usuario.id){
+    @for (usuario of usuarios; track usuario.id) {
 
       <ion-item>
-        <ion-label>
 
-          <h2>{{usuario.nome}}</h2>
+        <app-usuario-card
+          [nome]="usuario.nome"
+          [email]="usuario.email">
+        </app-usuario-card>
 
-          <p>{{usuario.email}}</p>
-        </ion-label>
-
-          <ion-button
+        <ion-button
           fill="outline"
           (click)="editar(usuario)">
           Editar
@@ -52,7 +50,7 @@
           (click)="excluir(usuario.id)">
           Excluir
         </ion-button>
-  
+
       </ion-item>
 
     }
